@@ -50,7 +50,7 @@
                 saveBtn.innerHTML = "Save";
                 saveBtn.dataset.url = jifURL;
                 saveBtn.addEventListener('click', event => {
-                   axios.post('/savejif', {url:event.target.dataset.url});
+                   axios.post('/api/jif', {name: event.target.dataset.url});
                    event.target.parentNode.style.display = "none";
                 });
 
